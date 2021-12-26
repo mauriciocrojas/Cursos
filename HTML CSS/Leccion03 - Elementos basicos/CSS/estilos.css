@@ -1,0 +1,32 @@
+h1{
+    color:crimson;
+    background-color: black;
+  }
+  h2{
+    color:blue;
+  }
+  p{
+    color:blueviolet;
+    background-color: khaki;
+    padding: 15px;
+    border: 10px solid powderblue;
+    margin: 25px;
+  }
+  a:link{
+    color:darkkhaki;
+    text-decoration: none;
+
+  }
+  a:visited{
+    color:green;
+    text-decoration: none;
+  }
+  /*cuando nos ponemos encima del link*/
+  a:hover{
+  color:orange;
+  text-decoration: underline;
+  }
+  a:active{
+    color:palevioletred;
+    text-decoration: underline;
+  }
