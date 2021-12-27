@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html¿>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo DOM con JS</title>
+    <style>
+        .azul{
+            color: blue;
+        }
+    </style> 
+</head>
+<body>
+    <h1 id="cabecero" class="azul">Ejemplo DOM con JS</h1>
+    <p id="parrafo1" class="azul">Saludos!</p>
+    <p id="parrafo2" class="azul">Otro párrafo</p>
+
+    <script>
+        
+        //let cabecero = document.getElementById("cabecero");
+        //console.log(`Valor cabecero: ${cabecero.innerHTML}`);
+
+        //let cabecero = document.getElementById("cabecero");
+        //console.log("Valor cabecero: " + cabecero.innerHTML);
+        
+        //let parrafo1 = document.getElementById("parrafo1");
+        //console.log(`Valor parrafo1: ${parrafo1.innerHTML}`);
+
+        //cabecero.innerHTML = "Nuevo valor del cabecero";
+        //parrafo1.innerHTML = "Nuevo valor del párrafo 1";
+
+        //let parrafos = document.getElementsByTagName("p");
+
+        /*
+        let parrafos = document.getElementsByClassName("azul");
+        console.log(`Nro párrafos: ${parrafos.length}`);
+
+        for (let i=0; i<parrafos.length; i++){
+            console.log(`Indice ${i} : ${parrafos[i].innerHTML}`);
+        }
+        */
+
+        //let elementos = document.getElementsByClassName("azul");
+
+        let elementos = document.querySelectorAll("p.azul");
+        console.log(`Nro elementos: ${elementos.length}`);
+
+        for (let elemento of elementos){
+            console.log(`${elemento.innerHTML}`);
+        }
+
+    </script>
+
+</body>
+</html>
