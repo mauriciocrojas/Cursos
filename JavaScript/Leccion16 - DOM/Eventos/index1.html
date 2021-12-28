@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html¿>
+<head>
+    <meta charset="UTF-8">
+    <title>Manejo DOM con JS</title>
+
+</head>
+<!--<body onload="entrar()">-->
+
+<body>
+
+    <h1 id="titulo">Manejo DOM con JS</h1>
+    <br>
+    Nombre: <input type="text" onchange="convertir(this)"/>
+
+
+    <!--<<div id="mostrar"></div>-->
+
+    <script>
+        /*
+        document.getElementById("titulo").onclick = cambiarTexto; //funcion callback
+
+        function cambiarTexto(){
+            document.getElementById("mostrar").innerHTML = "Nuevo contenido";
+        }
+        */
+        /*
+        function entrar(){
+            alert("Entrando a la página web...");
+            let texto = "";
+            if(navigator.cookieEnabled){
+                texto = "Las cookies están habilitadas";
+            }else{
+                texto = "Las cookies NO están habilitadas";
+            }
+            document.getElementById("mostrar").innerHTML = texto;
+        }
+        */
+
+        function convertir(nombreInput){
+            nombreInput.value = nombreInput.value.toUpperCase();
+        }
+
+    </script>
+</body>
+</html>

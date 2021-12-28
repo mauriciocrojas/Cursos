@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html¿>
+<head>
+    <meta charset="UTF-8">
+    <title>Manejo DOM con JS</title>
+
+</head>
+
+<body>
+
+    <!--<h1 id="titulo" onmouseover="rojo(this)" onmouseout="azul(this)">Manejo DOM con JS</h1>-->
+    <!--<h1 id="titulo" onclick="verde(this)" onmousedown="rojo(this)" onmouseup="azul(this)">Manejo DOM con JS</h1>-->
+    <h1 id="titulo" >Manejo DOM con JS</h1>
+    <br>
+    Nombre: <input type="text" onfocus="cambiar(this)" onblur="regresar(this)"/>
+    <br>
+    Apellido: <input type="text" onfocus="cambiar(this)" onblur="regresar(this)"/>
+
+    <script>
+
+        function cambiar(elementoInput){
+            elementoInput.style.background = "yellow";
+        }
+
+        function regresar(elementoInput){
+            elementoInput.style.background = "white";
+        }
+
+
+        /*
+        function rojo(titulo){
+            titulo.style.color = "red";
+        }
+
+        function azul(titulo){
+            titulo.style.color = "blue";
+        }
+
+        function verde(titulo){
+            titulo.style.color = "green";
+        }
+        */
+        /*
+        onmouseover: mouse encima
+        onmouseout: cuando se saca el mouse
+        onmousedown: click mantenido con el mouse btn izq
+        onmouseup: cuando se suelta el click
+        onclick: un click
+
+        onfocus: cambia background
+        onblur: regresa color
+        */
+    </script>
+</body>
+</html>
