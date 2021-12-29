@@ -11,13 +11,39 @@
     <!--<h1 id="titulo" onmouseover="rojo(this)" onmouseout="azul(this)">Manejo DOM con JS</h1>-->
     <!--<h1 id="titulo" onclick="verde(this)" onmousedown="rojo(this)" onmouseup="azul(this)">Manejo DOM con JS</h1>-->
     <h1 id="titulo" >Manejo DOM con JS</h1>
+    <!--
     <br>
     Nombre: <input type="text" onfocus="cambiar(this)" onblur="regresar(this)"/>
     <br>
     Apellido: <input type="text" onfocus="cambiar(this)" onblur="regresar(this)"/>
+    -->
+    <br>
+    Nombre: <input type="text" id="nombre"/>
+    <br>
+    Apellido: <input type="text" id="apellido"/>
 
     <script>
 
+        document.getElementById("nombre").addEventListener("focus", (evento)=>{
+            evento.target.style.background = "pink";
+        });
+        document.getElementById("nombre").addEventListener("blur", (evento)=>{
+            evento.target.style.background = "white";
+        });
+        
+        document.getElementById("apellido").addEventListener("focus", cambiar);
+        document.getElementById("apellido").addEventListener("blur", regresar);
+       
+        function cambiar(evento){
+            let componente = evento.target;
+            componente.style.background = "yellow";
+        }
+
+        function regresar(evento){
+           evento.target.style.background = "white";
+        }
+
+        /*
         function cambiar(elementoInput){
             elementoInput.style.background = "yellow";
         }
@@ -25,7 +51,7 @@
         function regresar(elementoInput){
             elementoInput.style.background = "white";
         }
-
+        */
 
         /*
         function rojo(titulo){
@@ -49,6 +75,8 @@
 
         onfocus: cambia background
         onblur: regresa color
+
+        addEventListener: para manejar eventos desde JS
         */
     </script>
 </body>

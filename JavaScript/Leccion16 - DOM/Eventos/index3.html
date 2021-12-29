@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html¿>
+<head>
+    <meta charset="UTF-8">
+    <title>Manejo DOM con JS</title>
+
+</head>
+
+<body>
+
+  <h1 id="titulo" >Manejo DOM con JS</h1>
+    <br>
+
+    <form id="form">
+
+        Nombre: <input type="text" id="nombre"/>
+        <br>
+        Apellido: <input type="text" id="apellido"/>
+
+    </form>
+
+    <script>
+
+        const form = document.getElementById("form");
+
+        form.addEventListener("focus", (evento)=>{
+            evento.target.style.background = "pink";
+        }, true); //delegacion de evento o useCapture
+
+        form.addEventListener("blur", (evento)=>{
+            evento.target.style.background = "white";
+        }, true); //delegacion de evento o useCapture
+
+    </script>
+</body>
+</html>
